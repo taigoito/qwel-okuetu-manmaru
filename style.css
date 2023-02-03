@@ -101,11 +101,11 @@ blockquote p, blockquote cite {
 }
 
 a, a:active {
-  color: #4d4d4d;
+  color: #8aad1f;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #3399cc;
+  color: #b3cc66;
   text-decoration: underline;
 }
 
@@ -143,7 +143,7 @@ button, input, select, textarea {
 /**
  * Layout
  */
-.section__container, .header__container, .--flexItem_12, .--flexItem_11, .--flexItem_10, .--flexItem_9, .--flexItem_8, .--flexItem_7, .--flexItem_6, .--flexItem_5, .--flexItem_4, .--flexItem_3, .--flexItem_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .postList__item, .postItem.--single .postItem__content, .postItem.--single .postItem__image, .section__container.--sm {
+.section__container, .header__container, .section__container.--md, .--flexItem_12, .--flexItem_11, .--flexItem_10, .--flexItem_9, .--flexItem_8, .--flexItem_7, .--flexItem_6, .--flexItem_5, .--flexItem_4, .--flexItem_3, .--flexItem_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .postList__item, .postItem.--single .postItem__content, .postItem.--single .postItem__image, .section__container.--sm {
   position: relative;
   flex: auto;
   width: 100%;
@@ -156,6 +156,11 @@ button, input, select, textarea {
   padding-right: 0.75rem;
 }
 
+.section__container.--md {
+  padding-left: clamp(0.75rem, 2%, 18px);
+  padding-right: clamp(0.75rem, 2%, 18px);
+}
+
 .section__container, .header__container {
   padding-left: clamp(0.75rem, 2%, 24px);
   padding-right: clamp(0.75rem, 2%, 24px);
@@ -164,11 +169,24 @@ button, input, select, textarea {
 /**
  * Layout - Header
  */
+:target {
+  scroll-margin-top: 3rem;
+}
+
 .header {
-  height: 4.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 6rem;
 }
 .header__inner {
   height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: all ease-in-out 0.25s;
+}
+.header__inner:hover {
   background-color: #ffffff;
 }
 .header__container {
@@ -187,7 +205,7 @@ button, input, select, textarea {
   height: 100%;
 }
 .gNav__siteBrand {
-  flex: 0 1 9rem;
+  flex: 0 0 192px;
   margin: 0;
   line-height: 1;
 }
@@ -198,7 +216,7 @@ button, input, select, textarea {
   align-items: center;
   list-style: none;
   padding-left: 0;
-  flex: 0 1 36rem;
+  flex: 0 1 42rem;
   margin: 0;
 }
 .gNav__socialMenu {
@@ -219,18 +237,22 @@ button, input, select, textarea {
   color: #262626;
 }
 .gNav__menuItem a:hover {
-  color: #3399cc;
+  color: #b3cc66;
 }
 
 /**
  * Layout - Main
  */
+.main {
+  padding-top: 6rem;
+}
+
 /**
  * Layout - Footer
  */
 .footer {
   padding: 6rem;
-  background-color: #3399cc;
+  background-color: #634d36;
   color: #ffffff;
   text-align: center;
 }
@@ -284,20 +306,20 @@ button, input, select, textarea {
   color: #262626;
 }
 .btn.--primary {
-  background-color: #3399cc;
+  background-color: #8aad1f;
   color: #ffffff;
 }
 .btn.--primaryLight {
-  background-color: #85c2e0;
+  background-color: #b3cc66;
   color: #262626;
 }
 .btn.--secondary {
-  background-color: #cc334b;
+  background-color: #f2800d;
   color: #ffffff;
 }
-.btn.--secondaryLight {
-  background-color: #e08594;
-  color: #262626;
+.btn.--tertiary {
+  background-color: #634d36;
+  color: #ffffff;
 }
 
 /**
@@ -330,8 +352,8 @@ button, input, select, textarea {
   right: 0;
   z-index: 1110;
   display: block;
-  width: calc(1.5rem + 48px);
-  height: calc(1.5rem + 48px);
+  width: calc(2.25rem + 60px);
+  height: calc(2.25rem + 60px);
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -339,17 +361,17 @@ button, input, select, textarea {
   outline: 0;
   cursor: pointer;
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .drawer {
     display: none;
   }
 }
 .drawer__navicon.icon, .drawer__close.icon {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  width: 48px;
-  height: 48px;
+  top: 1.125rem;
+  right: 1.125rem;
+  width: 60px;
+  height: 60px;
   transition: 0.25s all ease-in-out;
 }
 .drawer__navicon {
@@ -383,7 +405,7 @@ button, input, select, textarea {
   width: clamp(18rem, 40%, 24rem);
   height: 100%;
   margin: auto;
-  background-color: #b3b3b3;
+  background-color: #d9d9d9;
   text-align: center;
   transition: width ease-in-out 0.25s;
 }
@@ -429,7 +451,7 @@ button, input, select, textarea {
 }
 .drawerMenu__item.--siteBrand img {
   width: auto;
-  height: 48px;
+  height: 60px;
 }
 .drawerMenu__item.--social {
   width: 3rem;
@@ -445,7 +467,7 @@ button, input, select, textarea {
   text-decoration: none;
 }
 .drawerMenu.--dark {
-  background-color: #3399cc;
+  background-color: #8aad1f;
 }
 .drawerMenu.--dark .drawerMenu__item a {
   color: #ffffff;
@@ -537,7 +559,7 @@ button, input, select, textarea {
 }
 .form [type=button], .form [type=reset], .form [type=submit] {
   display: block;
-  background-color: #3399cc;
+  background-color: #8aad1f;
   color: #ffffff;
   display: block;
   width: 12rem;
@@ -604,7 +626,7 @@ button, input, select, textarea {
   z-index: 900;
   width: 100%;
   height: 100vh;
-  background: #3399cc;
+  background: #8aad1f;
   opacity: 1;
   transition: opacity ease-in-out 0.5s;
 }
@@ -708,18 +730,18 @@ button, input, select, textarea {
 .slider {
   position: relative;
   width: 100%;
-  height: calc(83.33vmin * 0.625);
+  height: calc(83.33vmin * 0.4);
   overflow: hidden;
 }
 @media (min-width: 900px) {
   .slider.--sm {
-    height: 12rem;
+    height: 9rem;
   }
   .slider.--md {
-    height: 18rem;
+    height: 13.5rem;
   }
   .slider.--lg {
-    height: 24rem;
+    height: 18rem;
   }
 }
 .slider__inner {
@@ -743,7 +765,7 @@ button, input, select, textarea {
 }
 .slider__item img {
   width: 83.33vmin;
-  aspect-ratio: 1.6;
+  aspect-ratio: 2.5;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0;
@@ -751,15 +773,15 @@ button, input, select, textarea {
 @media (min-width: 900px) {
   .slider.--sm .slider__item img {
     width: auto;
-    height: 12rem;
+    height: 9rem;
   }
   .slider.--md .slider__item img {
     width: auto;
-    height: 18rem;
+    height: 13.5rem;
   }
   .slider.--lg .slider__item img {
     width: auto;
-    height: 24rem;
+    height: 18rem;
   }
 }
 .slider__caption {
@@ -786,11 +808,11 @@ button, input, select, textarea {
   margin: auto;
   border: 0;
   background-color: transparent;
-  color: #85c2e0;
+  color: #b3cc66;
   text-align: center;
 }
 .slider__prev:hover, .slider__next:hover {
-  color: #3399cc;
+  color: #8aad1f;
 }
 .slider__prev {
   left: 0;
@@ -811,11 +833,11 @@ button, input, select, textarea {
   height: 0.5rem;
   margin: 0.75rem;
   border-radius: 50%;
-  background-color: #3399cc;
+  background-color: #8aad1f;
   cursor: pointer;
 }
 .slider__navItem:not(.--current) {
-  background-color: #85c2e0;
+  background-color: #b3cc66;
 }
 
 /**
@@ -853,36 +875,61 @@ button, input, select, textarea {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 9rem);
+  height: calc(100vh - 12rem);
   color: #ffffff;
   text-align: center;
 }
-.hero__content {
+.hero__content p {
+  margin-top: 3rem;
   font-size: 2rem;
+}
+.hero__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.hero__nav a {
+  width: 18rem;
 }
 
 /**
  * Project - Section
  */
+.section__heading {
+  padding-bottom: 0.375rem;
+  border-bottom: 0.375rem solid #8aad1f;
+}
+
 .section__inner {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #ffffff;
+  text-align: center;
 }
-.section:nth-child(odd) .section__inner {
-  background-color: #d9d9d9;
+#about .section__inner {
+  background-color: rgba(38, 38, 38, 0.5);
+  color: #ffffff;
 }
 .section__heading {
+  display: inline-block;
   margin: 1.5rem 0;
-  text-align: center;
+}
+#service .section__heading, #access .section__heading {
+  border-bottom-color: #f2800d;
 }
 .section__container {
   max-width: 1200px;
   padding-top: 2.25rem;
   padding-bottom: 3rem;
+  text-align: justify;
 }
 .section__container.--sm {
   max-width: 600px;
+}
+.section__container.--md {
+  max-width: 900px;
 }
 
 /**
@@ -918,6 +965,7 @@ button, input, select, textarea {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 3rem;
 }
 .postItem.--single .postItem__image {
   flex: 4 1 24rem;

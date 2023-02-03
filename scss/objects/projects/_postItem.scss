@@ -26,6 +26,7 @@
 
   &.--single {
     @include row();
+    margin-bottom: space(4);
 
     .postItem {
       &__image {

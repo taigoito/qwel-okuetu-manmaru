@@ -10,6 +10,18 @@
   text-align: center;
 
   &__content {
-    font-size: $h1FontSize;
+    p {
+      margin-top: space(4);
+      font-size: $h1FontSize;
+    }
+  }
+
+  &__nav {
+    @include row(center, center);
+    gap: space(3);
+
+    a {
+      width: 18rem;
+    }
   }
 }

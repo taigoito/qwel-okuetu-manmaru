@@ -2,29 +2,46 @@
  * Project - Section
  */
 
+%__sectionHeading {
+  padding-bottom: space(1);
+  border-bottom: space(1) solid themeColor();
+}
+
 .section {
   &__inner {
     padding-top: space(4);
     padding-bottom: space(4);
     background-color: $bodyBg;
+    text-align: center;
 
-    .section:nth-child(odd) & {
-      background-color: themeColor("lighter");
+    #about & {
+      background-color: rgba(themeColor("darkest"), .5);
+      color: $bodyBg;
     }
   }
 
   &__heading {
+    display: inline-block;
     margin: space(3) 0;
-    text-align: center;
+    @extend %__sectionHeading;
+
+    #service &, #access & {
+      border-bottom-color: themeColor("secondary");
+    }
   }
 
   &__container {
     @include container();
     padding-top: space(2) + space(3);
     padding-bottom: space(4);
+    text-align: justify;
 
     &.--sm {
       @include container("sm");
+    }
+
+    &.--md {
+      @include container("md");
     }
   }
 }

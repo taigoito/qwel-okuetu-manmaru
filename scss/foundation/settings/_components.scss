@@ -25,8 +25,8 @@ $breakpoint:           900px !default;
 
 // Drawer Menu
 $drawerAlwaysShown:    false !default;
-$drawerPad:            space(2) !default;
-$drawerHeight:         48px !default;
+$drawerPad:            1.125rem !default;
+$drawerHeight:         60px !default;
 $drawerMenuDarkBg:     $primary !default;
 
 // Preloader
@@ -37,9 +37,9 @@ $preloaderHeight:      100vh !default;
 $preloaderBg:          $primary !default;
 
 // Slider
-$sliderAspectRatio:    5 / 8 !default;
+$sliderAspectRatio:    2 / 5 !default;
 $sliderHeights:        (
-  sm:                    12rem,
-  md:                    18rem,
-  lg:                    24rem
+  sm:                    9rem,
+  md:                    13.5rem,
+  lg:                    18rem
 ) !default;

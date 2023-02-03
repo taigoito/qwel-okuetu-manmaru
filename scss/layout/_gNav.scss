@@ -7,7 +7,7 @@
   height: 100%;
 
   &__siteBrand {
-    flex: 0 1 9rem;
+    flex: 0 0 192px; // モバイル時のためpx指定: 12rem
     margin: 0;
     line-height: 1;
   }
@@ -15,7 +15,7 @@
   &__primaryMenu {
     @include row();
     @include listUnstyled();
-    flex: 0 1 36rem;
+    flex: 0 1 42rem;
     margin: 0;
   }
 
