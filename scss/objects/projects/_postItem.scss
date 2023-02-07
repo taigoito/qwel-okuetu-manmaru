@@ -3,6 +3,10 @@
  */
 
 .postItem {
+  &__image img {
+    border-radius: space(1);
+  }
+
   &__info {
     @include row(flex-start);
     font-size: $smallFontSize;
@@ -26,7 +30,10 @@
 
   &.--single {
     @include row();
-    margin-bottom: space(4);
+
+    &:not(:last-child) {
+      margin-bottom: space(4);
+    }
 
     .postItem {
       &__image {

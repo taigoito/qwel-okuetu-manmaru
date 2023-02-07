@@ -6,7 +6,7 @@
 
 // Drawer Menu
 //import DrawerMenu from './_drawerMenu.js';
-new DrawerMenu();
+new DrawerMenu({darkMode: true});
 
 // Embed
 //import Embed from './_embed.js';
@@ -18,7 +18,7 @@ new EvilIcons();
 
 // Fader
 //import Fader from './_fader.js';
-//new Fader();
+new Fader();
 
 // Preloader
 //import Preloader from './_preloader.js';

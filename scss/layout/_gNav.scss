@@ -7,7 +7,7 @@
   height: 100%;
 
   &__siteBrand {
-    flex: 0 0 192px; // モバイル時のためpx指定: 12rem
+    flex: 0 0 144px; // モバイル時のためpx指定: 9rem
     margin: 0;
     line-height: 1;
   }
@@ -22,7 +22,7 @@
   &__socialMenu {
     @include row();
     @include listUnstyled();
-    flex: 0 1 9rem;
+    flex: 0 1 6rem;
     margin: 0;
   }
 
@@ -35,6 +35,25 @@
 
       &:hover {
         color: $linkHoverColor;
+      }
+    }
+
+    .icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: -3px 0 0 -3px; // Spacing
+    }
+
+    &.--social a {
+      display: inline-block;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      background: themeColor("primary");
+      color: $bodyBg;
+
+      &:hover {
+        opacity: 0.7;
       }
     }
   }

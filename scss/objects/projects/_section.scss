@@ -15,7 +15,7 @@
     text-align: center;
 
     #about & {
-      background-color: rgba(themeColor("darkest"), .5);
+      background: linear-gradient(rgba(themeColor("darkest"), .5), rgba(themeColor("darkest"), .5)), url("./assets/sampleImg00.jpg") no-repeat center center / cover scroll;
       color: $bodyBg;
     }
   }

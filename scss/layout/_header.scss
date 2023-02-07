@@ -18,11 +18,15 @@ $headerHeight: 6rem;
 
   &__inner {
     height: 100%;
-    background-color: rgba($bodyBg, 0.85);
+    background-color: $bodyBg;
     transition: all ease-in-out .25s;
 
     &:hover {
       background-color: $bodyBg;
+    }
+
+    @media (min-width: breakpoint("lg")) {
+      background-color: rgba($bodyBg, 0.85);
     }
   }
 

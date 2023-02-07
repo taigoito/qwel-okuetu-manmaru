@@ -28,7 +28,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 900; // header: 1000 より背面
+    z-index: 9000; // header: 1000 より全面
     width: 100%;
     height: $preloaderHeight;
     background: $preloaderBg;

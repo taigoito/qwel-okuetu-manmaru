@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starter Template</title>
+    <title>奥越前まんまるサイト</title>   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="favicon.ico">
   </head>
@@ -30,18 +31,27 @@
       </header>
       <main id="main" class="main">
         <header id="hero" class="hero">
-          <div class="hero__content">
-            <p v-html="message"></p>
-            <div class="hero__nav">
-              <a class="btn --primary" href="#about">奥越前まんまるサイトとは</a>
-              <a class="btn --secondary" href="#contact">体験・ワークステイお申込み</a>
+          <div class="hero__inner">
+            <div class="hero__container">
+              <div class="hero__gallery fader">
+                <img class="hero__image" src="./assets/main01.jpg">
+                <img class="hero__image" src="./assets/main02.jpg">
+                <img class="hero__image" src="./assets/main03.jpg">
+              </div>
+              <div class="hero__backText">manmaru</div>
+              <div class="hero__foreText">
+                <span>みんな「まんまる」につながろう。</span>
+                  <br><span>私たちは、人、山、川、土、生物、まち。</span>
+                    <br><span>多様な存在のつながりを、</span>
+                    <br><span>創っていく仲間です。</span>
+              </div>
             </div>
           </div>
         </header>
         <section class="section" :id="sections['feature'].id">
           <div class="section__inner">
             <h2 class="section__heading">{{sections['feature'].name}}</h2>
-            <div class="slider --sm --mt_3 --mb_2" data-aspect-ratio="0.4" data-gap="72">
+            <div class="slider --sm --mt_3 --mb_2" data-aspect-ratio="0.4" data-gap="64">
               <figure class="slider__inner">
                 <figure class="slider__item" v-for="item in sections['feature'].items">
                   <img class="slider__image" :src="item.src">
@@ -144,9 +154,6 @@
           </div>
         </section>
       </main>
-      <div class="cover">
-        <div class="cover__image"></div>
-      </div>
       <footer id="footer" class="footer">
         <small v-html="copyright"></small>
       </footer>
@@ -208,7 +215,7 @@
               },
               news: {
                 id: 'news',
-                name: 'ブログ&ニュース',
+                name: '新着記事',
                 more: 'もっと詳しく',
                 items: [
                 {
@@ -252,7 +259,7 @@
               }
             },
             social: {
-              twitter: true,
+              twitter: false,
               facebook: true,
               instagram: true
             },

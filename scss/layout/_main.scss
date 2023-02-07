@@ -4,4 +4,8 @@
 
 .main {
   padding-top: $headerHeight;
+
+  @media (min-width: breakpoint("md")) {
+    padding-top: $headerHeight - 2.25rem;
+  }
 }
