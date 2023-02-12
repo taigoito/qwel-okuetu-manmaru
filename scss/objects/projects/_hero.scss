@@ -2,7 +2,7 @@
  * Project - Hero
  */
 
-$heroAspectRatio:    5 / 10;
+$heroAspectRatio:    6 / 10;
 $heroAspectRatioLg:  4 / 10;
 $heroTextBase:       1.2;
 
@@ -14,7 +14,9 @@ $heroTextBase:       1.2;
 
   &__gallery {
     position: relative;
-    height: 96vw * $heroAspectRatio;
+    height: 100vw * $heroAspectRatio;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
 
     // Preloader用クラス
     .preloader & {
@@ -28,7 +30,6 @@ $heroTextBase:       1.2;
 
   &__image {
     position: absolute;
-    border-radius: 1.5rem;
     aspect-ratio: 1 / $heroAspectRatio;
     object-fit: cover;
     opacity: 1;
@@ -60,12 +61,12 @@ $heroTextBase:       1.2;
 
     span:first-child {
       font-weight: bold;
-      font-size: 1.33rem;
+      font-size: 1rem;
       line-height: 1;
     }
 
     span:not(:first-child) {
-      font-size: 1rem;
+      font-size: 0.83rem;
       line-height: 2;
     }
   }
@@ -73,14 +74,18 @@ $heroTextBase:       1.2;
   @media (min-width: breakpoint("md")) {
     &__container {
       // 1rem = 1.6vw
+      margin-top: calc(min(2.4vw, 1.5rem * $heroTextBase) * -1);
       padding-top: min(8.8vw, 5.5rem * $heroTextBase); // Back Text height - 0.5rem
     }
 
     &__gallery {
       height: min(96vw * $heroAspectRatioLg, 72rem * $heroAspectRatioLg); // ContainerMaxWidth * AspectRatio
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &__image {
+      border-radius: 1.5rem;
       aspect-ratio: 1 / $heroAspectRatioLg;
     }
 
@@ -95,7 +100,7 @@ $heroTextBase:       1.2;
 
     &__foreText {
       position: absolute;
-      top: min(6.4vw, 4rem * $heroTextBase);
+      top: min(6.72vw, 4.2rem * $heroTextBase);
       left: 4.5rem;
       margin: 0;
       padding: 0;
