@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Okuetu Manmaru
 Description: This is a theme for Okuetu Manmaru Site.
@@ -32,8 +31,8 @@ body {
   margin: 0;
   background-color: var(--wp--preset--color--lightest, #ffffff);
   color: var(--wp--preset--color--darkest, #262626);
-  font-family: "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
   line-height: var(--wp--custom--line-height--large, 1.8);
   letter-spacing: 0;
   -webkit-text-size-adjust: 100%;
@@ -42,8 +41,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: var(--wp--custom--spacing--medium, 1.5rem);
   margin-bottom: var(--wp--custom--spacing--small, 0.75rem);
-  font-family: "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
 }
 
 h1 {
@@ -255,7 +254,7 @@ button, input, select, textarea {
 /**
  * Layout
  */
-.section__container, .titleArea__container, .footer__container, .main__container, .header__container, .--flexItem_12, .--flexItem_11, .--flexItem_10, .--flexItem_9, .--flexItem_8, .--flexItem_7, .--flexItem_6, .--flexItem_5, .--flexItem_4, .--flexItem_3, .--flexItem_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image, .main__sidebar, .main__content {
+.section__container, .hero__container, .titleArea__container, .footer__container, .main__container, .header__container, .--flexItem_12, .--flexItem_11, .--flexItem_10, .--flexItem_9, .--flexItem_8, .--flexItem_7, .--flexItem_6, .--flexItem_5, .--flexItem_4, .--flexItem_3, .--flexItem_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image, .main__sidebar, .main__content {
   position: relative;
   flex: auto;
   gap: 0;
@@ -269,7 +268,7 @@ button, input, select, textarea {
   padding-right: 0.75rem;
 }
 
-.section__container, .titleArea__container, .footer__container, .main__container, .header__container {
+.section__container, .hero__container, .titleArea__container, .footer__container, .main__container, .header__container {
   padding-left: var(--wp--custom--spacing--container-pad-wide, 0.75rem);
   padding-right: var(--wp--custom--spacing--container-pad-wide, 0.75rem);
 }
@@ -277,12 +276,30 @@ button, input, select, textarea {
 /**
  * Layout - Header
  */
+:target {
+  scroll-margin-top: 3rem;
+}
+
 .header {
-  height: 4.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 6rem;
 }
 .header__inner {
   height: 100%;
   background-color: var(--wp--preset--color--lightest, #ffffff);
+  transition: all ease-in-out 0.25s;
+}
+.header__inner:hover {
+  background-color: var(--wp--preset--color--lightest, #ffffff);
+}
+@media (min-width: 1200px) {
+  .header__inner {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
 }
 .header__container {
   max-width: 1200px;
@@ -300,24 +317,75 @@ button, input, select, textarea {
   height: 100%;
 }
 .gNav__siteBrand {
-  flex: 0 1 9rem;
+  flex: 0 0 144px;
   margin: 0;
   line-height: 1;
+}
+.gNav__primaryMenu {
+  flex: 0 1 42rem;
+  margin: 0;
 }
 @media (max-width: 899.9px) {
   .gNav__primaryMenu {
     display: none !important;
   }
 }
+.gNav__socialMenu {
+  flex: 0 1 6rem;
+  margin: 0;
+}
 @media (max-width: 899.9px) {
   .gNav__socialMenu {
     display: none !important;
   }
 }
+.gNav .wp-block-navigation-item {
+  margin: 0;
+  line-height: 1;
+}
+.gNav .wp-block-navigation-item .wp-block-navigation-item__content {
+  color: var(--wp--preset--color--darkest, #262626);
+}
+.gNav .wp-block-navigation-item .wp-block-navigation-item__content:hover {
+  color: var(--wp--preset--color--primary, #6e981b);
+}
+.gNav .wp-block-social-links {
+  gap: 0;
+}
+.gNav .wp-block-social-links .wp-social-link-facebook {
+  display: inline-block;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.gNav .wp-block-social-links .wp-social-link-facebook svg {
+  display: inline-block;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--wp--preset--color--lightest, #ffffff);
+  color: var(--wp--preset--color--primary, #6e981b);
+}
+.gNav .wp-block-social-links .wp-social-link-instagram {
+  display: inline-block;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.gNav .wp-block-social-links .wp-social-link-instagram svg {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.125rem;
+  border-radius: 50%;
+  background: var(--wp--preset--color--primary, #6e981b);
+  color: var(--wp--preset--color--lightest, #ffffff);
+}
 
 /**
  * Layout - Main
  */
+.main {
+  padding-top: 6rem;
+}
 .main__content {
   flex: 6 1 36rem;
 }
@@ -551,6 +619,101 @@ button, input, select, textarea {
   font-size: var(--wp--custom--font-size--small, 0.875rem);
   line-height: var(--wp--custom--line-height--x-large, 2);
   letter-spacing: 0.04rem;
+}
+
+/**
+ * Project - Hero
+ */
+.hero__container {
+  position: relative;
+  max-width: 1200px;
+}
+.hero__gallery.wp-block-gallery.is-layout-flex.is-style-fader-items {
+  position: relative;
+  display: block;
+  height: 60vw;
+  margin-left: -0.75rem !important;
+  margin-right: -0.75rem !important;
+  margin-bottom: 0;
+}
+.hero__gallery.wp-block-gallery.is-layout-flex.is-style-fader-items .wp-block-image {
+  position: absolute;
+  aspect-ratio: 1.6666666667;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 1;
+  transition: 1s linear opacity;
+}
+.hero__gallery.wp-block-gallery.is-layout-flex.is-style-fader-items .wp-block-image.--fade {
+  opacity: 0;
+  transition: none;
+}
+.hero__backText {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--wp--preset--color--lighter, #d9d9d9);
+  font-weight: 100;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+.hero__foreText {
+  margin-left: -0.75rem !important;
+  margin-right: -0.75rem !important;
+  padding: var(--wp--custom--spacing--medium, 1.5rem);
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #eee, #fff);
+}
+.hero__foreText span:first-child {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+}
+.hero__foreText span:not(:first-child) {
+  font-size: 0.83rem;
+  line-height: 2;
+}
+@media (min-width: 900px) {
+  .hero__container {
+    margin-top: calc(min(2.4vw, 1.8rem) * -1);
+    padding-top: min(8.8vw, 6.6rem);
+  }
+  .hero__gallery.wp-block-gallery.is-layout-flex.is-style-fader-items {
+    height: min(38.4vw, 28.8rem);
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .hero__gallery.wp-block-gallery.is-layout-flex.is-style-fader-items .wp-block-image {
+    border-radius: 1.5rem;
+    aspect-ratio: 2.5;
+  }
+  .hero__backText {
+    position: absolute;
+    right: 3rem;
+    bottom: calc(100% - min(9.6vw, 7.2rem));
+    z-index: -1;
+    color: var(--wp--preset--color--lighter, #d9d9d9);
+    font-size: min(9.6vw, 7.2rem);
+  }
+  .hero__foreText {
+    position: absolute;
+    top: min(6.72vw, 5.04rem);
+    left: 4.5rem;
+    margin: 0 !important;
+    padding: 0;
+    background: none;
+    line-height: 2.4;
+  }
+  .hero__foreText span:first-child {
+    font-size: min(2.4vw, 1.8rem);
+    text-shadow: 0 0 6px #ffffff;
+  }
+  .hero__foreText span:not(:first-child) {
+    padding: 2px 0px 4px 6px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: min(1.6vw, 1.2rem);
+  }
 }
 
 /**

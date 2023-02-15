@@ -2,14 +2,32 @@
  * Layout - Header
  */
 
-$headerHeight: 4.5rem;
+$headerHeight: 6rem;
+
+:target {
+  scroll-margin-top: $headerHeight / 2;
+}
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
   height: $headerHeight;
 
   &__inner {
     height: 100%;
     background-color: $bodyBg;
+    transition: all ease-in-out .25s;
+
+    &:hover {
+      background-color: $bodyBg;
+    }
+
+    @media (min-width: breakpoint("lg")) {
+      background-color: rgba(#ffffff, 0.85);
+    }
   }
 
   &__container {

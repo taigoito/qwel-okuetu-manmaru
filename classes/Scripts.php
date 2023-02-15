@@ -6,6 +6,12 @@ trait Scripts {
   public static function enqueue_scripts() {
     // バージョン情報を取得
 		$version = wp_get_theme()->get( 'Version' );
+		
+		// Google Fonts
+    $family = 'Noto+Sans+JP:wght@100;400;700';
+    if ($family !== '') {
+      wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css2?family=' . $family . '&display=swap', [], null); 
+    }
 
 		// style.css
 		wp_enqueue_style(

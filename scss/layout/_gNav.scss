@@ -7,20 +7,73 @@
   height: 100%;
 
   &__siteBrand {
-    flex: 0 1 9rem;
+    flex: 0 0 144px; // モバイル時のためpx指定: 9rem
     margin: 0;
     line-height: 1;
   }
 
   &__primaryMenu {
+    flex: 0 1 42rem;
+    margin: 0;
+
     @media (max-width: breakpoint("md") - 0.1) {
       display: none !important;
     }
   }
 
   &__socialMenu {
+    flex: 0 1 6rem;
+    margin: 0;
+
     @media (max-width: breakpoint("md") - 0.1) {
       display: none !important;
+    }
+  }
+
+  .wp-block-navigation-item {
+    margin: 0;
+    line-height: 1;
+
+    .wp-block-navigation-item__content {
+      color: $bodyColor;
+
+      &:hover {
+        color: $linkHoverColor;
+      }
+    }
+  }
+
+  .wp-block-social-links {
+    gap: 0;
+
+    .wp-social-link-facebook {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+
+      svg {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 50%;
+        background: $bodyBg;
+        color: themeColor("primary");
+      }
+    }
+    .wp-social-link-instagram {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+
+      svg {
+        display: inline-block;
+        width: 2.5rem; // Adjust sizing
+        height: 2.5rem;
+        margin: 0.125rem;
+        border-radius: 50%;
+        background: themeColor("primary");
+        color: $bodyBg;
+      }
     }
   }
 }

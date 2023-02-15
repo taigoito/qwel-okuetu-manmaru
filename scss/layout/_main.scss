@@ -3,6 +3,8 @@
  */
 
 .main {
+  padding-top: $headerHeight;
+  
   &__container {
     @extend %__containerLg;
   }

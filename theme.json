@@ -71,12 +71,12 @@
 				{
 					"slug": "sans-serif",
 					"name": "Sans Serif",
-					"fontFamily": "\"Yu Gothic\", sans-serif"
+					"fontFamily": "\"Noto Sans JP\", sans-serif"
 				},
 				{
 					"slug": "serif",
 					"name": "Serif",
-					"fontFamily": "\"Yu Mincho\", serif"
+					"fontFamily": "\"Noto Sans JP\", serif"
 				},
 				{
 					"slug": "system-font",

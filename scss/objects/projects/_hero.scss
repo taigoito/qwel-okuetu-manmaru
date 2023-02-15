@@ -1,0 +1,124 @@
+/**
+ * Project - Hero
+ */
+
+$heroAspectRatio:    6 / 10;
+$heroAspectRatioLg:  4 / 10;
+$heroTextBase:       1.2;
+
+.hero {
+  &__container {
+    position: relative;
+    @include container();
+  }
+
+  &__gallery.wp-block-gallery.is-layout-flex.is-style-fader-items {
+    position: relative;
+    display: block; // Reset
+    height: 100vw * $heroAspectRatio;
+    margin-left: -$gutter !important;
+    margin-right: -$gutter !important;
+    margin-bottom: 0;
+
+    // Preloader用クラス
+    .preloader & {
+      //opacity: 0; // Preloader稼働前は透過
+  
+      .--loaded & {
+        //opacity: 1; // イメージを読み込んだら透過を解除
+      }
+    }
+
+    .wp-block-image {
+      position: absolute;
+      aspect-ratio: 1 / $heroAspectRatio;
+      object-fit: cover;
+      opacity: 1;
+      transition: 1s linear opacity;
+      
+      &.--fade {
+        opacity: 0;
+        transition: none;
+      }
+    }
+  }
+
+  &__backText {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: themeColor("lighter");
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  &__foreText {
+    margin-left: -$gutter !important;
+    margin-right: -$gutter !important;
+    padding: space(3);
+    letter-spacing: 0.08em;
+    background: linear-gradient(135deg, #eee, #fff);
+
+    span:first-child {
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    span:not(:first-child) {
+      font-size: 0.83rem;
+      line-height: 2;
+    }
+  }
+
+  @media (min-width: breakpoint("md")) {
+    &__container {
+      // 1rem = 1.6vw
+      margin-top: calc(min(2.4vw, 1.5rem * $heroTextBase) * -1);
+      padding-top: min(8.8vw, 5.5rem * $heroTextBase); // Back Text height - 0.5rem
+    }
+
+    &__gallery.wp-block-gallery.is-layout-flex.is-style-fader-items {
+      height: min(96vw * $heroAspectRatioLg, 72rem * $heroAspectRatioLg); // ContainerMaxWidth * AspectRatio
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      .wp-block-image {
+        border-radius: 1.5rem;
+        aspect-ratio: 1 / $heroAspectRatioLg;
+      }
+    }
+
+    &__backText {
+      position: absolute;
+      right: 3rem;
+      bottom: calc(100% - min(9.6vw, 6rem * $heroTextBase));
+      z-index: -1;
+      color: themeColor("lighter");
+      font-size: min(9.6vw, 6rem * $heroTextBase);
+    }
+
+    &__foreText {
+      position: absolute;
+      top: min(6.72vw, 4.2rem * $heroTextBase);
+      left: 4.5rem;
+      margin: 0 !important;
+      padding: 0;
+      background: none;
+      line-height: 2.4;
+
+      span:first-child {
+        font-size: min(2.4vw, 1.5rem * $heroTextBase);
+        text-shadow: 0 0 6px #ffffff;
+      }
+      
+      span:not(:first-child) {
+        padding: 2px 0px 4px 6px;
+        background-color: rgba(255, 255, 255, 0.7);
+        font-size: min(1.6vw, 1rem * $heroTextBase);
+      }
+    }
+  }
+}
