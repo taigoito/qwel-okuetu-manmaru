@@ -37,22 +37,22 @@
 				{
 					"slug": "primary",
 					"name": "Primary",
-					"color": "#3399cc"
+					"color": "#6e981b"
 				},
 				{
 					"slug": "primary-light",
 					"name": "Primary Light",
-					"color": "#85c2e0"
+					"color": "#aacc66"
 				},
 				{
 					"slug": "secondary",
 					"name": "Secondary",
-					"color": "#cc334b"
+					"color": "#f2800d"
 				},
 				{
-					"slug": "secondary-light",
-					"name": "Secondary Light",
-					"color": "#e08594"
+					"slug": "tertiary",
+					"name": "Tertiary",
+					"color": "#634d36"
 				}
 			]
 		},

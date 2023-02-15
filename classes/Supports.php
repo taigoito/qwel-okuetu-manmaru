@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Theme;
+namespace OkuetuManmaru_Theme;
 
 trait Supports {
   // テーマサポート機能

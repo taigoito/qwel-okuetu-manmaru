@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Theme;
+namespace OkuetuManmaru_Theme;
 
 trait Scripts {
   // CSS, JSファイルを読み込み

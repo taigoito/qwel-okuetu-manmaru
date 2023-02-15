@@ -1,5 +1,5 @@
 {
-  "name": "qwel-two",
+  "name": "qwel-okuetu-manmaru",
   "version": "1.0.0",
   "description": "",
   "main": "init.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taigoito/qwel.git"
+    "url": "git+https://github.com/taigoito/qwel-okuetu-manmaru.git"
   },
   "author": "Taigo Ito",
   "license": "GPL",
   "bugs": {
-    "url": "https://github.com/taigoito/qwel/issues"
+    "url": "https://github.com/taigoito/qwel-okuetu-manmaru/issues"
   },
-  "homepage": "https://github.com/taigoito/qwel#readme"
+  "homepage": "https://github.com/taigoito/qwel-okuetu-manmaru#readme"
 }

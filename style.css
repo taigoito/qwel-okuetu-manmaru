@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
-Theme Name: Qwel Two Beta
-Description: This is a theme for someone's portfolio or blog. You can customize and use.
+Theme Name: Okuetu Manmaru
+Description: This is a theme for Okuetu Manmaru Site.
 Version: 1.0
 Requires PHP: 7.4
 Author: Taigo Ito
@@ -115,7 +115,7 @@ a, a:active {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: var(--wp--preset--color--primary, #3399cc);
+  color: var(--wp--preset--color--primary, #6e981b);
   text-decoration: underline;
 }
 
@@ -161,7 +161,7 @@ button, input, select, textarea {
   text-decoration: none;
 }
 .wp-block-navigation-item a:hover, .wp-block-navigation-item a:focus {
-  color: var(--wp--preset--color--primary, #3399cc);
+  color: var(--wp--preset--color--primary, #6e981b);
   text-decoration: underline;
 }
 .wp-block-social-links {
@@ -192,7 +192,7 @@ button, input, select, textarea {
 }
 .wp-block-query-pagination-numbers .page-numbers {
   display: inline-block;
-  background-color: var(--wp--preset--color--primary, #3399cc);
+  background-color: var(--wp--preset--color--primary, #6e981b);
   color: var(--wp--preset--color--lightest, #ffffff);
   padding: var(--wp--custom--spacing--small, 0.75rem);
   border: none;
@@ -203,7 +203,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -214,7 +213,7 @@ button, input, select, textarea {
   opacity: 0.85;
 }
 .wp-block-query-pagination-numbers .page-numbers.current {
-  background-color: var(--wp--preset--color--primary-light, #85c2e0);
+  background-color: var(--wp--preset--color--primary-light, #aacc66);
   color: var(--wp--preset--color--darkest, #262626);
   cursor: default;
 }
@@ -358,7 +357,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -391,20 +389,20 @@ button, input, select, textarea {
   color: var(--wp--preset--color--darkest, #262626);
 }
 .btn.--primary {
-  background-color: var(--wp--preset--color--primary, #3399cc);
+  background-color: var(--wp--preset--color--primary, #6e981b);
   color: var(--wp--preset--color--lightest, #ffffff);
 }
 .btn.--primaryLight {
-  background-color: var(--wp--preset--color--primary-light, #85c2e0);
+  background-color: var(--wp--preset--color--primary-light, #aacc66);
   color: var(--wp--preset--color--darkest, #262626);
 }
 .btn.--secondary {
-  background-color: var(--wp--preset--color--secondary, #cc334b);
+  background-color: var(--wp--preset--color--secondary, #f2800d);
   color: var(--wp--preset--color--lightest, #ffffff);
 }
-.btn.--secondaryLight {
-  background-color: var(--wp--preset--color--secondary-light, #e08594);
-  color: var(--wp--preset--color--darkest, #262626);
+.btn.--tertiary {
+  background-color: var(--wp--preset--color--tertiary, #634d36);
+  color: var(--wp--preset--color--lightest, #ffffff);
 }
 
 /**
@@ -475,7 +473,7 @@ button, input, select, textarea {
 }
 .form [type=button], .form [type=reset], .form [type=submit] {
   display: block;
-  background-color: var(--wp--preset--color--primary, #3399cc);
+  background-color: var(--wp--preset--color--primary, #6e981b);
   color: var(--wp--preset--color--lightest, #ffffff);
   display: block;
   width: 12rem;
@@ -489,7 +487,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
