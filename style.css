@@ -100,11 +100,11 @@ blockquote p, blockquote cite {
 }
 
 a, a:active {
-  color: #8aad1f;
+  color: #6e981b;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #b3cc66;
+  color: #aacc66;
   text-decoration: underline;
 }
 
@@ -241,7 +241,7 @@ button, input, select, textarea {
   color: #262626;
 }
 .gNav__menuItem a:hover {
-  color: #b3cc66;
+  color: #aacc66;
 }
 .gNav__menuItem .icon {
   width: 2.75rem;
@@ -253,7 +253,7 @@ button, input, select, textarea {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
-  background: #8aad1f;
+  background: #6e981b;
   color: #ffffff;
 }
 .gNav__menuItem.--social a:hover {
@@ -325,11 +325,11 @@ button, input, select, textarea {
   color: #262626;
 }
 .btn.--primary {
-  background-color: #8aad1f;
+  background-color: #6e981b;
   color: #ffffff;
 }
 .btn.--primaryLight {
-  background-color: #b3cc66;
+  background-color: #aacc66;
   color: #262626;
 }
 .btn.--secondary {
@@ -395,7 +395,7 @@ button, input, select, textarea {
 }
 .drawer__navicon.icon {
   border-radius: 50%;
-  background-color: #8aad1f;
+  background-color: #6e981b;
   color: #ffffff;
 }
 .drawer__navicon {
@@ -491,7 +491,7 @@ button, input, select, textarea {
   text-decoration: none;
 }
 .drawerMenu.--dark {
-  background-color: #8aad1f;
+  background-color: #6e981b;
 }
 .drawerMenu.--dark .drawerMenu__item a {
   color: #ffffff;
@@ -583,7 +583,7 @@ button, input, select, textarea {
 }
 .form [type=button], .form [type=reset], .form [type=submit] {
   display: block;
-  background-color: #8aad1f;
+  background-color: #6e981b;
   color: #ffffff;
   display: block;
   width: 12rem;
@@ -649,7 +649,7 @@ button, input, select, textarea {
   z-index: 9000;
   width: 100%;
   height: 100vh;
-  background: #8aad1f;
+  background: #6e981b;
   opacity: 1;
   transition: opacity ease-in-out 0.5s;
 }
@@ -833,11 +833,11 @@ button, input, select, textarea {
   margin: auto;
   border: 0;
   background-color: transparent;
-  color: #b3cc66;
+  color: #aacc66;
   text-align: center;
 }
 .slider__prev:hover, .slider__next:hover {
-  color: #8aad1f;
+  color: #6e981b;
 }
 .slider__prev {
   left: 0;
@@ -858,11 +858,11 @@ button, input, select, textarea {
   height: 0.5rem;
   margin: 0.75rem;
   border-radius: 50%;
-  background-color: #8aad1f;
+  background-color: #6e981b;
   cursor: pointer;
 }
 .slider__navItem:not(.--current) {
-  background-color: #b3cc66;
+  background-color: #aacc66;
 }
 
 /**
@@ -989,7 +989,7 @@ button, input, select, textarea {
  */
 .section__heading {
   padding-bottom: 0.375rem;
-  border-bottom: 0.375rem solid #8aad1f;
+  border-bottom: 0.375rem solid #6e981b;
 }
 
 .section__inner {
