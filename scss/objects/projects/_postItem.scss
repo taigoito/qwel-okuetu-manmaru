@@ -5,6 +5,7 @@
 .postItem {
   &__image {
     img {
+      border-radius: 2.25rem;
       aspect-ratio: 1 / $imgAspectRatio;
       object-fit: cover;
     }
@@ -35,6 +36,11 @@
       &__content {
         @include col(5, true);
         margin-bottom: space(4);
+      }
+
+      &__info, &__heading {
+        margin-top: space(3);
+        margin-bottom: space(2);
       }
     }
   }

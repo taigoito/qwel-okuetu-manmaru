@@ -10,6 +10,9 @@
   
   &__container {
     @extend %__containerLg;
+    padding-top: 2.25rem;
+    padding-bottom: space(4);
+    text-align: justify;
   }
 
   &__heading {

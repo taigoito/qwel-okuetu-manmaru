@@ -57,5 +57,5 @@ $bodyColor:        themeColor("darkest");
 
 // リンク文字の設定
 // リンクを強調するため、_typography.scssにて、文字の装飾も設定すること
-$linkColor:        themeColor("darker");
-$linkHoverColor:   themeColor("primary");
+$linkColor:        themeColor("primary");
+$linkHoverColor:   themeColor("primaryLight");
