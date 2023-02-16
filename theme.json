@@ -225,12 +225,20 @@
 			"title": "Section Hero"
 		},
 		{
-			"name": "section-about",
-			"title": "Section About"
+			"name": "section-feature",
+			"title": "Section Feature"
+		},
+		{
+			"name": "section-activities",
+			"title": "Section Activities"
 		},
 		{
 			"name": "section-news",
 			"title": "Section News"
+		},
+		{
+			"name": "section-about",
+			"title": "Section About"
 		},
 		{
 			"name": "section-access",

@@ -5,9 +5,25 @@
 .section {
   &__inner {
     background-color: $bodyBg;
+    text-align: center;
   }
   
   &__container {
     @extend %__containerLg;
+  }
+
+  &__heading {
+    display: inline-block;
+    margin: space(3) 0;
+    padding-bottom: space(1);
+    border-bottom: space(1) solid themeColor();
+
+    &#feature {
+      margin-bottom: 4.5rem;
+    }
+
+    &#activities, &#access {
+      border-bottom-color: themeColor("secondary");
+    }
   }
 }
