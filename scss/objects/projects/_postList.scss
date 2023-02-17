@@ -30,7 +30,7 @@
     .post {
       margin-bottom: space(3);
       padding-bottom: space(3);
-      border-bottom: 1px solid themeColor('dark');
+      border-bottom: 4px dotted hsl(30, 30%, 70%);
 
       &:last-child {
         border: 0;

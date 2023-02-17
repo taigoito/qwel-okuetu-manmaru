@@ -22,11 +22,11 @@ $headerHeight: 6rem;
     transition: all ease-in-out .25s;
 
     &:hover {
-      background-color: $bodyBg;
+      //background-color: $bodyBg;
     }
 
     @media (min-width: breakpoint("lg")) {
-      background-color: rgba(#ffffff, 0.85);
+      //background-color: rgba(#ffffff, 0.85);
     }
   }
 
