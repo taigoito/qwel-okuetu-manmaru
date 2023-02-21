@@ -249,8 +249,12 @@
 			"title": "Section Contact"
 		},
 		{
-			"name": "sidebar",
-			"title": "Sidebar"
+			"name": "page-sidebar",
+			"title": "Page Sidebar"
+		},
+		{
+			"name": "post-sidebar",
+			"title": "Post Sidebar"
 		},
 		{
 			"name": "footer",

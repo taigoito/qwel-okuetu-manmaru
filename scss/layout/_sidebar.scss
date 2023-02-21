@@ -1,0 +1,9 @@
+/**
+ * Layout - Sidebar
+ */
+
+.sidebar {
+  ul {
+    @include listUnstyled();
+  }
+}
