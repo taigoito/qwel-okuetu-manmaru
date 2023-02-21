@@ -10,6 +10,9 @@ trait Supports {
 		// エディターにstyle.cssをセット
 		add_editor_style( 'style.css' );
 
+    // 固定ページの抜粋をサポート
+    add_post_type_support( 'page', 'excerpt' );
+
   }
 
 }

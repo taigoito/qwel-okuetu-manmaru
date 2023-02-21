@@ -474,15 +474,15 @@ button, input, select, textarea {
   border-radius: 2.25rem;
   overflow: hidden;
 }
-.card.--primary {
+li:nth-child(3n+1) .card {
   background-color: var(--wp--preset--color--primary, #6e981b);
   color: var(--wp--preset--color--lightest, #ffffff);
 }
-.card.--secondary {
+li:nth-child(3n-1) .card {
   background-color: var(--wp--preset--color--secondary, #f2800d);
   color: var(--wp--preset--color--lightest, #ffffff);
 }
-.card.--tertiary {
+li:nth-child(3n) .card {
   background-color: var(--wp--preset--color--tertiary, #634d36);
   color: var(--wp--preset--color--lightest, #ffffff);
 }

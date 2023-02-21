@@ -8,17 +8,17 @@
   border-radius: 2.25rem;
   overflow: hidden;
 
-  &.--primary {
+  li:nth-child(3n+1) & {
     @include background("primary");
 
   }
 
-  &.--secondary {
+  li:nth-child(3n-1) & {
     @include background("secondary");
 
   }
 
-  &.--tertiary {
+  li:nth-child(3n) & {
     @include background("tertiary");
   }
 
