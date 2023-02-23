@@ -1,0 +1,44 @@
+/**
+ * Project - Local
+ */
+
+.localNav {
+  @include listUnstyled();
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 1 1 240px;
+
+    a {
+      display: block;
+      width: 240px;
+      height: 80px;
+    }
+
+    @for $i from 1 through 9 {
+      &:nth-child(#{$i}) {
+        background: url("/data/uploads/local#{$i}.jpg") no-repeat center center / contain scroll;
+
+        &:hover {
+          background-image: url("/data/uploads/local#{$i}_on.jpg");
+        }
+      }
+    }
+  }
+}
+
+.local {
+  position: relative;
+  margin: space(4) auto;
+
+  &__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__description {
+    @include smallText();
+  }
+}
