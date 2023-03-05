@@ -30,11 +30,15 @@
 
 .local {
   position: relative;
-  margin: space(4) auto;
+  //margin: space(4) auto;
+
+  &__title {
+    padding-top: space(5); // scroll-margin-top not work.
+  }
 
   &__map {
     position: absolute;
-    top: 0;
+    top: space(4);
     right: 0;
   }
 

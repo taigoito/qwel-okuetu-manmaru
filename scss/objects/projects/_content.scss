@@ -4,52 +4,39 @@
 
 .wp-block-post-content {
   h2 {
+    position: relative;
+    margin: space(4) 0 space(3);
+    padding-left: 2.25rem;
+    font-weight: 100;
+    font-size: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: -18px;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      background-color: themeColor("primaryLight");
+    }
+  }
+
+  h3 {
     margin: space(4) 0 space(3);
     border-left: space(1) solid #f7b36e; // hsl(30, 90%, 70%)
     padding: space(2) 0 space(2) space(2);
     background: linear-gradient(45deg, #fce6cf, themeColor("lightest")); // hsl(30, 90%, 90%)
   }
 
-  h3 {
-    position: relative;
-    display: inline-block;
-    font-weight: bold;
-    font-size: $h3FontSize;
-    line-height: 2;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 2px;
-      width: 100%;
-      height: 6px;
-      background: repeating-linear-gradient(-45deg, themeColor("primaryLight"), themeColor("primaryLight") 2px, themeColor("lightest") 2px, themeColor("lightest") 4px);
-    }
-  }
-
   h4 {
-    position: relative;
-    display: inline-block;
     font-weight: bold;
-    font-size: $h4FontSize;
-    line-height: 2;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 2px;
-      width: 100%;
-      height: 4px;
-      background: repeating-linear-gradient(-45deg, themeColor("secondary"), themeColor("secondary") 2px, themeColor("lightest") 2px, themeColor("lightest") 4px);
-    }
+    text-decoration: underline solid themeColor("primaryLight") 4px;
   }
 
   h5 {
     position: relative;
     font-weight: bold;
-    font-size: $h5FontSize;
     line-height: 2;
 
     &::after {
@@ -60,6 +47,18 @@
       width: 100%;
       height: 2px;
       background: linear-gradient(45deg, themeColor("tertiary"), themeColor("lightest"));
+    }
+  }
+
+  .wp-block-column {
+    p {
+      @include smallText();
+    }
+
+    .wp-block-button {
+      &__link:hover {
+        color: themeColor("lightest");
+      }
     }
   }
 }

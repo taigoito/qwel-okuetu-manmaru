@@ -21,11 +21,11 @@
     padding-bottom: space(1);
     border-bottom: space(1) solid themeColor();
 
-    &#feature {
+    &.feature {
       margin-bottom: 4.5rem;
     }
 
-    &#activities, &#access {
+    &.access {
       border-bottom-color: themeColor("secondary");
     }
   }

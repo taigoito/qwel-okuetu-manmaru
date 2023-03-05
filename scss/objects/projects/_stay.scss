@@ -1,0 +1,18 @@
+/**
+ * Project - Stay
+ */
+
+.stay {
+  &__image {
+    margin: 0 auto;
+  }
+
+  &__table {
+    overflow-x: auto;
+
+    table {
+      width: 48rem;
+      @include smallText();
+    }
+  }
+}

@@ -4,6 +4,25 @@
 
 .main {
   padding-top: $headerHeight;
+  padding-bottom: 3rem;
+
+  &__headerContainer {
+    @extend %__containerLg;
+    height: min(40vw, 28.8rem);
+
+    .wp-block-cover {
+      height: 100%;
+      min-height: 100%;
+
+      img {
+        border-radius: 1.5rem;
+      }
+
+      .wp-block-post-title {
+        margin: auto;
+      }
+    }
+  }
   
   &__container {
     @extend %__containerLg;

@@ -35,6 +35,10 @@
     padding: 0 1.5rem;
     font-weight: bold;
     text-align: justify;
+
+    a {
+      color: inherit;
+    }
   }
 
   &__description {
