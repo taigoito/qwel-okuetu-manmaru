@@ -22,7 +22,7 @@
     }
   }
 
-  h3 {
+  h3:not(.noStyle) {
     margin: space(4) 0 space(3);
     border-left: space(1) solid #f7b36e; // hsl(30, 90%, 70%)
     padding: space(2) 0 space(2) space(2);
