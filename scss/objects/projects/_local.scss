@@ -34,12 +34,17 @@
 
   &__title {
     padding-top: space(5); // scroll-margin-top not work.
+
+    img {
+      mix-blend-mode: multiply;
+    }
   }
 
   &__map {
     position: absolute;
     top: space(4);
     right: 0;
+    z-index: -1;
   }
 
   &__description {

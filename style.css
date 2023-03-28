@@ -1032,10 +1032,14 @@ li:nth-child(3n) .card {
 .local__title {
   padding-top: var(--wp--custom--spacing--x-large, 6rem);
 }
+.local__title img {
+  mix-blend-mode: multiply;
+}
 .local__map {
   position: absolute;
   top: var(--wp--custom--spacing--large, 3rem);
   right: 0;
+  z-index: -1;
 }
 .local__description {
   font-size: var(--wp--custom--font-size--small, 0.875rem);
