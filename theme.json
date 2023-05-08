@@ -241,6 +241,10 @@
 			"title": "Section About"
 		},
 		{
+			"name": "section-links",
+			"title": "Section Links"
+		},
+		{
 			"name": "section-access",
 			"title": "Section Access"
 		},
